@@ -1,7 +1,7 @@
 <?php 
 	echo "hogehoge";
  	define('DEBUG',TRUE);
- 	
+
  	function add($num1,$num2){
  		$result = $num1 + $num2;
  		return $result;
@@ -43,6 +43,15 @@
  		if (DEBUG) {
  			echo $val;
  			echo "<br>";
+ 		}
+ 	}
+
+ 	function org_var_dump($val){
+ 		if (DEBUG) {
+ 			echo "<pre>";
+ 				var_dump($val);
+ 			echo "<pre>";
+
  		}
  	}
  ?>
