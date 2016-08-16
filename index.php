@@ -1,6 +1,7 @@
 <?php 
 	echo "hogehoge";
- 	
+ 	define('DEBUG',TRUE);
+
  	function add($num1,$num2){
  		$result = $num1 + $num2;
  		return $result;
@@ -37,4 +38,20 @@
  	$result=$num1-$num2;
  	echo $result;
 
+ 	//デバック用関数の定義
+ 	function org_echo($val){
+ 		if (DEBUG) {
+ 			echo $val;
+ 			echo "<br>";
+ 		}
+ 	}
+
+ 	function org_var_dump($val){
+ 		if (DEBUG) {
+ 			echo "<pre>";
+ 				var_dump($val);
+ 			echo "</pre>";
+
+ 		}
+ 	}
  ?>
